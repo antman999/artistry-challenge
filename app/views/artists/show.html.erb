@@ -1,0 +1,9 @@
+<h4><%= @artist.name %></h4>
+<div><%= @artist.title %></div>
+<div><%= @artist.age %></div>
+<% @artist.musics.each do |v|%>
+<% instrument = Instrument.find_by(id:v.instrument_id)%>
+<div>plays the <%= link_to instrument.name, instruments_path %></div>
+
+<% end%>
+<%= link_to 'index', artists_path %><br>

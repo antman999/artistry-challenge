@@ -1,0 +1,9 @@
+<%=form_for @music do |v| %>
+<%= v.label :artist_id %>
+<%= v.collection_select :artist_id, @artist, :id, :name %>
+
+<%= v.label :instrument_id %>
+<%= v.collection_select :instrument_id, @instrument, :id, :name %>
+
+<%= v.submit %>
+<% end%>

@@ -1,0 +1,8 @@
+<% @artist.each do |v|%>
+<div><%= link_to v.name, artist_path(v) %></div>
+<% end%>
+<br>
+<br>
+<%= link_to 'Enter a new artist', new_artist_path %><br>
+<%= link_to 'add an Instrument', new_music_path%>
+<%#  %>

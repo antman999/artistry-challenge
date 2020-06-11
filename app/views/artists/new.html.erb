@@ -1,0 +1,18 @@
+<% if flash[:artist_errors]%>
+<% flash[:artist_errors].each do |v|%>
+<p><%= v %></p>
+<% end%>
+<% end%>
+
+<%= form_for @artist do |v| %>
+<%= v.label :name %>
+<%= v.text_field :name%><br>
+
+<%= v.label :age %>
+<%= v.text_field :age%><br>
+
+<%= v.label :title %>
+<%= v.text_field :title%><br>
+
+<%= v.submit %>
+<% end%>
